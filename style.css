@@ -215,4 +215,16 @@ claim {
       animation: fadeIn 1s;
     }
 
+.column {
+  float: left;
+  margin-left: 35%;
+  margin-bottom: 15pt;
+  width: 50%;
+}
 
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

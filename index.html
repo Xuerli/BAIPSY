@@ -38,12 +38,13 @@
                         <li>The chance to win £50 or £20 (Two first-place winners in either Psychology or AI will receive £50 each; four second-place winners in either field will receive £20 each).</li> 
                     </ul>
               </p>
-             <h3>Important Dates (Anywhere on Earth)</h3>
-                 <li>Interest Registration Deadline: 1st May 2024</li>
-                <li>Submission Deadline: 17th May 2024</li>
-                <li>Workshop Date: 1st July  2024</li>
+             <p id="mainDate"></p>
+<!--             <p id="mainAward"></p>-->
+<!--             <p id="mainOrg"></p>-->
+             <p id="mainSub"></p>
              <h3>Venue</h3>
-             <a href="https://maps.app.goo.gl/BESvpAHombEwR3sT6">Informatics Forum</a>
+             <a href="https://maps.app.goo.gl/BESvpAHombEwR3sT6">Informatics Forum,</a>
+             <p>the University of Edinburgh</p>
              <p>10 Crichton Street, Edinburgh, EH8 9AB </p>
          </div>
 
@@ -52,12 +53,11 @@
             <ul>
             <li><a href="https://xueli-shirley.vercel.app/">Dr. Xue Li</a> (Chiar)</li>
             <li><a href="https://www.ed.ac.uk/profile/phd-student-ke-shi">Ke Shi</a>(Chiar)</li>
-            <li> <a href="https://www.research.ed.ac.uk/en/persons/guillermo-romero-moreno">Dr. Guillermo Romero Moreno (Co-Chiar)</a>   
+            <li> <a href="https://www.research.ed.ac.uk/en/persons/guillermo-romero-moreno">Dr. Guillermo Romero Moreno</a> (Co-Chiar)
             </ul>
 
-            <h3>Steering Committee</h3>
+            <h3>Program Committee</h3>
             <ul>
-            <li> <a href="https://www.research.ed.ac.uk/en/persons/guillermo-romero-moreno">Dr. Guillermo Romero Moreno</a>   
             <li> <a href="https://www.ed.ac.uk/profile/hamdullahtunc"> Hamdullah Tunç </a></li>
             <li> <a href="https://www.clairebarale.com/"> Claire Barale  </a></li>
             <li> <a href="https://www.inf.ed.ac.uk/people/students/Ricky_Ruiqi_Zhu.html"> Ruiqi Zhu (also known as Ricky Zhu)</a>
@@ -83,10 +83,17 @@
              <p>The submission deadline is shown in the "Imporntat Date" page.
                  Submitted Posters should be A1 and must be in portrait orientation. <b>Organisers can print posters if authors specify that when registering.</b>
                  In the workshop, authors will present their posters and have the chance to win best poster awards. </p>
-            
+            <div class="row">
+                <div class="column">
+                    <button type="submit"><a href="https://forms.office.com/e/QngTVFe3jG" style = "margin-bottom: 1em;">Register Interests Here</a></button>
+                </div>
+                <div class="column">
+                    <button type="submit"><a href="https://forms.office.com/e/Y4iFehukNg" style = "margin-bottom: 1em;">Submit Poster Here</a></button>
+                </div>
+            </div>
          </div>
         <div id="award" class="tabcontent">
-            <h3>Award</h3>
+            <h3>Awards</h3>
             Best posters of first and second places will be voted then awarded Amazon Vouchers. Awards will be evenly distributed between AI and Psychological filds. 
             For interdisciplinary posters, they will need to register in one filed.
             <ul>
@@ -100,10 +107,8 @@
                 In the event of a tie,
                 a second round of voting will determine the winners.</p>
 
-            <h4>Voting criterial</h4>
-            <p>There are no strict criteria for voting, but just consider the potential relationship with another subject area </p>
-             <button type="submit"><a href="https://forms.office.com/e/QngTVFe3jG" style = "none">Register Interests Here</a></button> <br />
-             <button type="submit"><a href="https://forms.office.com/e/Y4iFehukNg" style = "none">Submit Here</a></button>
+            <h4>Voting Criteria</h4>
+            <p>The criteria include but not limited to the potential relationship with another subject area and the presentation of the poster, e.g, easy to read and follow, captured the idea/topic of the poster.</p>
             <br>
             <br>
         </div>
@@ -126,8 +131,16 @@ function openTab(evt, tabName) {
   }
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
+  if (tabName == "home"){
+    document.getElementById("mainDate").innerHTML = document.getElementById("importantDate").innerHTML;
+    <!--document.getElementById("mainAward").innerHTML = document.getElementById("award").innerHTML;-->
+<!--    document.getElementById("mainOrg").innerHTML = document.getElementById("organisation").innerHTML;-->
+    document.getElementById("mainSub").innerHTML = document.getElementById("submission").innerHTML;
+
+  }
 }
 document.getElementsByClassName('tablinks')[0].click()
+
 
 </script>
 </body>
